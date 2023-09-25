@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pb_exit->setStyleSheet("QPushButton {font-size: 18pt; font-weight: bold}");
 
     ui->lb_timer->setText("00:00:00");
-    ui->lb_timer->setStyleSheet("QLabel {font-size: 40pt; font-weight: bold");
+    ui->lb_timer->setStyleSheet("QLabel {font-size: 40pt; font-weight: bold}");
 
     ui->te_results->setEnabled(false);
     ui->te_results->setStyleSheet("QTextEdit {font-size: 8pt}");
