@@ -14,14 +14,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->pb_startstop->setText("СТАРТ");
     ui->pb_startstop->setStyleSheet("QPushButton { background-color : green; color : red; font-size: 18pt; font-weight: bold;}");
+
     ui->pb_clear->setText("ОЧИСТИТЬ");
     ui->pb_clear->setStyleSheet("QPushButton {font-size: 18pt; font-weight: bold}");
     ui->pb_clear->setEnabled(false);
+
     ui->pb_exit->setText("ВЫЙТИ");
     ui->pb_exit->setStyleSheet("QPushButton {font-size: 18pt; font-weight: bold}");
 
-    ui->lb_timer->setText("00:00:000");
-    ui->lb_timer->setStyleSheet("QLable {font-size: 40pt; font-weight: bold");
+    ui->lb_timer->setText("00:00:00");
+    ui->lb_timer->setStyleSheet("QLabel {font-size: 40pt; font-weight: bold");
 
     ui->te_results->setEnabled(false);
     ui->te_results->setStyleSheet("QTextEdit {font-size: 8pt}");
@@ -88,8 +90,6 @@ void MainWindow::on_pb_startstop_clicked()
     {
         ui->pb_startstop->setText("СТАРТ");
         ui->pb_startstop->setStyleSheet("QPushButton { background-color : green; color : red; font-size: 18pt; font-weight: bold;}");
-
-        // ui->lb_timer->setText("00:00:00");
     }
 }
 
@@ -98,7 +98,7 @@ void MainWindow::on_pb_clear_clicked()
 {
     sendClear();
     ui->te_results->clear();
-    ui->lb_timer->setText("00:00:000");
+    ui->lb_timer->setText("00:00:00");
     currentCircle = 1;
 }
 

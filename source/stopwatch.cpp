@@ -11,7 +11,7 @@ Stopwatch::Stopwatch(QObject *parent)
 
 Stopwatch::~Stopwatch()
 {
-    delete timer;
+    // delete timer;
 }
 
 void Stopwatch::SendDisplayUpdate(QString time)
@@ -101,11 +101,12 @@ void Stopwatch::recieve_getCircleTime()
 
     circle_time += ":";
 
+    //if (circle_msec < 10)
+    //{
+    //    circle_time = circle_time + "00" + QString::number(circle_msec);
+    //}
+    //else if (circle_msec < 100)
     if (circle_msec < 10)
-    {
-        circle_time = circle_time + "00" + QString::number(circle_msec);
-    }
-    else if (circle_msec < 100)
     {
         circle_time = circle_time + "0" + QString::number(circle_msec);
     }
@@ -205,11 +206,12 @@ QString Stopwatch::build_string()
 
     current_timer += ":";
 
+    //if (mseconds < 10)
+    //{
+    //    current_timer = current_timer + "00" + QString::number(mseconds);
+    //}
+    //else if (mseconds < 100)
     if (mseconds < 10)
-    {
-        current_timer = current_timer + "00" + QString::number(mseconds);
-    }
-    else if (mseconds < 100)
     {
         current_timer = current_timer + "0" + QString::number(mseconds);
     }
